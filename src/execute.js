@@ -5,6 +5,7 @@ import StdLibPluginBrowser from './plugins/StdLibPluginBrowser';
 import HelperPluginBrowser from './plugins/HelperPluginBrowser';
 
 export default function execute(content, print) {
+  const startedAt = performance.now();
   return transpiler(content, {
     plugins: {
       stdLibPlugin: new StdLibPluginBrowser(),
@@ -13,6 +14,12 @@ export default function execute(content, print) {
   })
     .then(res => {
       const code = new Function('$$stdLib', '$$hlpLib', 'print', res);
+      const transpiledAt = performance.now();
       code(std, hlp, print);
+      const executedAt = performance.now();
+      print('');
+      print('Finished programm:');
+      print('Transpilation took ' + (transpiledAt - startedAt) + ' ms.');
+      print('Execution took ' + (executedAt - transpiledAt) + ' ms.');
     });
 }

@@ -1,5 +1,6 @@
 import execute from './execute';
 import printToDiv from './printToDiv';
+import './setlxLanguage';
 
 const editor = document.getElementById('editor');
 const cons = document.getElementById('cons');
@@ -16,7 +17,9 @@ document.body.appendChild(cons);
 
 const codemirror = CodeMirror(editor, {
   theme: 'monokai',
-  value: 'print("hello world");'
+  value: 'print("hello world");',
+  lineNumbers: true,
+  mode: 'setlx',
 });
 
 editor.firstChild.style.height = '100%';

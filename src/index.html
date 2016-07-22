@@ -12,6 +12,10 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.min.js" >
     </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/addon/mode/simple.min.js"
+    >
+    </script>
     <style>
       * {
         box-sizing: border-box;
@@ -34,10 +38,11 @@
         margin: 0;
         float: right;
         height: 100%;
-        background-color: black;
-        color: white;
+        background-color: #272822;
+        color: #f8f8f2;
         padding: 10px;
         font-family: monospace;
+        border-left: 2px solid #f8f8f2;
       }
 
       .error-line {
@@ -46,7 +51,9 @@
     </style>
   </head>
   <body>
-    <div id="editor"></div>
-    <div id="cons"></div>
+    <div id="main">
+      <div id="editor"></div>
+      <div id="cons"></div>
+    </div>
   </body>
 </html>
