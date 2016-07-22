@@ -23,14 +23,16 @@ editor.firstChild.style.height = '100%';
 
 const print = printToDiv(cons);
 
-const markLine = number => {
-  codemirror.addLineClass('line-error', 'background', number);
-}
-
 button.onclick = () => {
   cons.innerHTML = '';
   execute(codemirror.getValue(), print)
     .catch(error => {
       print(error);
+
+      codemirror.addLineClass(error.line - 1, 'background', 'error-line');
+      const evt = codemirror.on('change', function me() {
+        codemirror.removeLineClass(error.line - 1, 'background', 'error-line');
+        codemirror.off('change', me);
+      });
     });
 };
