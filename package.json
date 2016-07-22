@@ -1,0 +1,22 @@
+{
+  "name": "setlxjs-browser",
+  "version": "1.0.0",
+  "description": "In browser SetlX environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hendrikniemann",
+  "license": "MIT",
+  "dependencies": {
+    "codemirror": "^5.17.0",
+    "setlxjs-lib": "^1.2.0",
+    "setlxjs-transpiler": "^1.2.0",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "html-webpack-plugin": "^2.22.0"
+  }
+}
