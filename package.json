@@ -11,7 +11,7 @@
   "dependencies": {
     "codemirror": "^5.17.0",
     "setlxjs-lib": "^1.2.0",
-    "setlxjs-transpiler": "^1.2.0",
+    "setlxjs-transpiler": "^1.2.1",
     "webpack": "^1.13.1"
   },
   "devDependencies": {

@@ -12,8 +12,41 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.min.js" >
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/mode/javascript.js" >
-    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      #editor {
+        width: 50%;
+        margin: 0;
+        float: left;
+        height: 100%;
+      }
+
+      #cons {
+        width: 50%;
+        margin: 0;
+        float: right;
+        height: 100%;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-family: monospace;
+      }
+
+      .error-line {
+        background-color: red;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="editor"></div>
+    <div id="cons"></div>
+  </body>
 </html>
