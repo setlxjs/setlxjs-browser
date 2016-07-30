@@ -1,4 +1,10 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+
+function versions() {
+  return '"setlxjs-lib v' + require('setlxjs-lib/package.json').version + ' + ' +
+    'setlxjs-transpiler v' + require('setlxjs-transpiler/package.json').version + '"';
+}
 
 module.exports = {
   entry: './src/index.js',
@@ -21,7 +27,12 @@ module.exports = {
       },
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html',
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new webpack.DefinePlugin({
+      "SETLXJS_VERSION": versions(),
+    }),
+  ],
 }

@@ -26,11 +26,53 @@
         margin: 0;
       }
 
+      button {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        border: none;
+        color: #f0f0f0;
+        background-color: #272822;
+        height: 30px;
+        font-size: 20px;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      #menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: #30322a;
+        color: #f0f0f0;
+        padding: 15px;
+        font-size: 15px;
+        font-family: sans-serif;
+      }
+
+      #menu > a {
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 25px;
+        margin-top: -5px;
+        display: block;
+        float: left;
+      }
+
+      #menu > div {
+        float: left;
+        margin-left: 20px;
+        margin-top: 1px;
+      }
+
       #editor {
         width: 50%;
         margin: 0;
         float: left;
         height: 100%;
+        padding-top: 50px;
       }
 
       #cons {
@@ -40,9 +82,9 @@
         height: 100%;
         background-color: #272822;
         color: #f8f8f2;
-        padding: 10px;
+        padding: 60px 10px 10px 10px;
         font-family: monospace;
-        border-left: 2px solid #f8f8f2;
+        border-left: 2px solid #30322a;
         overflow-y: auto;
       }
 
@@ -52,6 +94,9 @@
     </style>
   </head>
   <body>
+    <div id="menu">
+      <a href="../">SetlX.js</a>
+    </div>
     <div id="main">
       <div id="editor"></div>
       <div id="cons"></div>

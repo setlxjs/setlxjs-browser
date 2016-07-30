@@ -7,17 +7,16 @@ const cons = document.getElementById('cons');
 
 const button = document.createElement('button');
 button.innerHTML = 'RUN!';
-button.style.position = 'fixed';
-button.style.top = '10px';
-button.style.right = '10px';
 
 document.body.appendChild(editor);
 document.body.appendChild(button);
 document.body.appendChild(cons);
 
+document.getElementById('menu').innerHTML += '<div>' + SETLXJS_VERSION + '</div>';
+
 const codemirror = CodeMirror(editor, {
   theme: 'monokai',
-  value: 'print("hello world");',
+  value: '// write your programm here and hit the run button above\nprint("hello world");',
   lineNumbers: true,
   mode: 'setlx',
 });
