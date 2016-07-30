@@ -4,14 +4,16 @@
   "description": "In browser SetlX environment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack -w"
   },
   "author": "hendrikniemann",
   "license": "MIT",
   "dependencies": {
     "codemirror": "^5.17.0",
     "setlxjs-lib": "^1.2.0",
-    "setlxjs-transpiler": "^1.2.1",
+    "setlxjs-transpiler": "^1.3.0",
     "webpack": "^1.13.1"
   },
   "devDependencies": {
