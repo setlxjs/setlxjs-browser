@@ -12,8 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "codemirror": "^5.17.0",
-    "setlxjs-lib": "^1.2.0",
-    "setlxjs-transpiler": "^1.3.0",
+    "setlxjs-lib": "^1.2.1",
+    "setlxjs-transpiler": "^1.4.0",
     "webpack": "^1.13.1"
   },
   "devDependencies": {
